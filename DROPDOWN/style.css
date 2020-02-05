@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+    font-style: bold; 
+
+}
+
+header > ul{
+    display: flex;
+    text-align: center;
+    padding-left: 20px;
+
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+}
+
+body{
+    background-color: rgb(245, 224, 131);
+    
+}
+
+header{
+    background-color: white;
+    font-size: 25px;
+    text-align: center;
+    
+
+}
+
+
+#namakomunitas{
+
+    font-style: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    padding-left: 0px;
+}
+
+#Logo{
+    display: flex;
+}
+
+.slogan{
+    font-size: 20px;
+    padding-top: 5px;
+
+}
+
+.button{
+    float: left;
+}
+
+.search{
+    float: right;
+    
+}
+
+.navbar > ul{
+    display: flex;
+    
+}
+
+.drop{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    
+    
+}
+
+.drop-trigger:hover .drop{
+    display: block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+
+    
+
+
+}
+
+.navbar ul li a:hover {
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+
+    
+
+
+}
+
+
+
+
+
