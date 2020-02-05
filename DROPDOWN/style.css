@@ -66,7 +66,7 @@ header{
 
 .drop{
     display: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color:rgba(179, 172, 172, 0.911);
     position: absolute;
     
     
@@ -79,25 +79,44 @@ header{
 .navbar ul li a {
     text-decoration: none;
     text-align: center;
-    background-color: white;
-
-    
-
-
+    border-radius: 0px;
 }
 
 .navbar ul li a:hover {
     text-decoration: none;
     text-align: center;
-    background-color: black;
-    background-size: 50px
-
-    
-
+    background: none;
+    background-size: 50px  
 
 }
 
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
 
+/* menghidupkan dengan warna menu (Beranda)*/
+}
 
+.home, .navbar ul li:hover{
+    background: white;
+    border-radius: 0px; 
+    text-decoration: none;
 
+}
 
+.drop2{
+    display: none;
+    background-color:rgba(179, 172, 172, 0.911);
+    position: relative;
+    padding: left 2;;
+    font-size: 15px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    
+    
+}
+
+.drop-trigger2:hover .drop2{
+    display: block;
+}
