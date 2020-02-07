@@ -510,10 +510,13 @@ header{
 }
 
 .copyright{
-	margin-left: 506px;
-	font-style: bold;
-	color: white;
-	font-size: medium;
+	
+	margin-left: 557px;
+    font-size: bold;
+    color: white;
+    font-size: medium;
+    top: 330px;
+    position: relative;
 }
 
 .icon a img{
