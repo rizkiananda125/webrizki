@@ -478,6 +478,7 @@ header{
 
 .footer{
 	padding: 50px;
+	
 
 }
 
@@ -487,7 +488,9 @@ header{
 .footer{
 	background-image: linear-gradient(#1CD8D2,#93EDC7);
 	padding: 20px;
-	margin-top: 5px;
+	padding-top: 10px;
+	margin-top: 10px;
+	position: relative;
 }
 
 .footer-title{
@@ -495,7 +498,7 @@ header{
 	font-size: x-large;
     font-family: monospace;
     position: relative;
-    bottom: -20px;
+    bottom: 103px;
 }
 
 .isi-title{
@@ -504,9 +507,8 @@ header{
     color: white;
     padding-top: 10px;
     margin-right: 985px;
-    /* padding-bottom: 32px; */
     text-align: justify;
-    bottom: -30px;
+    bottom: 91px;
 }
 
 .copyright{
@@ -550,19 +552,19 @@ header{
 
 .location{
 
-	left: 160px;
+	left: 155px;
     position: relative;
-    bottom: 23px;
+    bottom: 27px;
     font-size: x-large;
-	
 }
+
 
 .map{
 
 	border: white;
     left: -413px;
     position: relative;
-    bottom: 166px;
+    bottom: 306px;
     margin-left: 70%;
 }
 
