@@ -171,6 +171,7 @@ header{
 .sliderisi img{
     width: 500px;
 	height: 450px;
+	top: 5px;
 }
 
 .sliderisi{
@@ -477,7 +478,8 @@ header{
 }
 
 .footer{
-	padding: 50px;
+	padding: 30px;
+	position: relative;
 	
 
 }
@@ -489,7 +491,6 @@ header{
 	background-image: linear-gradient(#1CD8D2,#93EDC7);
 	padding: 20px;
 	padding-top: 10px;
-	margin-top: 10px;
 	position: relative;
 }
 
@@ -514,10 +515,10 @@ header{
 .copyright{
 	
 	margin-left: 557px;
-    font-size: bold;
+    font-size: 100px;
     color: white;
     font-size: medium;
-    top: 330px;
+    top: 300px;
     position: relative;
 }
 
@@ -526,7 +527,7 @@ header{
 	
 	width: 50px;
 	left: 1072px;
-	bottom: 115px;
+	bottom: 214px;
 	position: relative;
 	background-color: white;
 	border-radius: 50px;
@@ -539,7 +540,7 @@ header{
 	
 	width: 50px;
 	left: 1072px;
-	bottom: 115px;
+	bottom: 214px;
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.411);
 	border-radius: 50px;
