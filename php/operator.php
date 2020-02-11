@@ -1,3 +1,29 @@
+<?php
+
+    $a=10;
+    $b=20;
+    function myTest(){
+global $a;
+global $b;
+    
+    echo ($a)+($b);
+    }
+myTest();
+
+?>
+
+<?php
+
+    global$a,$b;
+    
+    $a="abc";
+    $b="Rizki Ananda";
+
+    echo $GLOBALS["a"]="abc";
+    echo $GLOBALS["b"]="Rizki Ananda";
+
+?>
+
 <!-- presentase diskon -->
 
 <?php
@@ -31,7 +57,7 @@ $kali=($a*$d);
 $tambah=($a+$c);
 $kurang=($b-$d);
 $bagi=($a/$b);
-$hasil="$kali";
+$hasil=$kali;
 
 if($hasil==80){
     echo"Nilai Anda Adalah $kali";
@@ -48,3 +74,5 @@ if($hasil==80){
 
 
 ?>
+
+
