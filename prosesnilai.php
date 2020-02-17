@@ -50,7 +50,7 @@ $jurusan="";
 // nilai
 
 
-if (isset($_POST['periksa_nilai']) == "check"){
+if (isset($_POST['periksa_nilai']) ="check"){
     $name=$_POST['nama'];
     $nim=$_POST['nim'];
     $direction=$_POST['jurusan'];
@@ -62,26 +62,30 @@ if (isset($_POST['periksa_nilai']) == "check"){
     $hasil= $harian*10/100 + $uts*35/100 + $uas*40/100 + $quiz*15/100;
 
     if ($hasil<=50){
+
             echo " nama $nama dengan $nim dan $jurusan $hasil nilainya E";
             
     }elseif ($hasil<=65){
+
             echo " nama $nama dengan $nim dan $jurusan $hasil nilainya D";
             
     }elseif ($hasil<=70){
+
             echo "nama $nama dengan $nim dan $jurusan $hasil nilainya C";
             
     }elseif ($hasil<=83){
+
             echo "nama $nama dengan $nim dan $jurusan $hasil nilainya B";
             
     }elseif ($hasil>=100){
+
             echo "nama $nama dengan $nim dan $jurusan $hasil nilainya A";
     }else{
         echo "tidak lulus";
     }
 }
-    
-// echo "nama $name dengan NIM $nim dan Jurusan $direction mendapatkan 
-// nilai $hasil";
 
 ?>
+
+
 
