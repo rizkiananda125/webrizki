@@ -144,5 +144,7 @@ if (isset($_POST['submit'])){
 </body>
 </html>
 
-<!-- tag php -->
+<?php
+include "footer.php";
+?>
 
