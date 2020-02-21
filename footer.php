@@ -1,5 +1,9 @@
 <!-- footer -->
-<footer class="page-footer font-small teal pt-4">
+<footer class="page-footer font-small teal pt-10">
+
+  <div class="navbar navbar-dark bg-primary">
+
+  </div>
 
   <!-- Footer Text -->
   <div class="container-fluid text-center text-md-left">
@@ -8,10 +12,10 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
+      <div class="col-md-6 mt-md-0 mt-3"> <br>
 
         <!-- Content -->
-        <h5 class="text-uppercase font-weight-bold">ta'aruf</h5>
+        <h5 class="text-uppercase font-weight-bold">ta'aruf</h5> <br>
         <p>aplikasi ini digunakan untuk suka-suka. bisa jadi apa saja 
           diinginkan oleh klien, asal anda menggunakan dengan bijak yo..</p>
 
@@ -21,12 +25,12 @@
       <hr class="clearfix w-100 d-md-none pb-3">
 
       <!-- Grid column -->
-      <div class="col-md-6 mb-md-0 mb-3">
+      <div class="col-md-6 mb-md-0 mb-3"> <br>
 
         <!-- Content -->
-        <h5 class="text-uppercase font-weight-bold">catatan kriminal</h5>
+        <h5 class="text-uppercase font-weight-bold">catatan kriminal</h5> <br>
         <p>ini merupakan aplikasi percobaan anda bisa melakukan 
-          perhitungan dan proses input dan database</p>
+          perhitungan dan proses input dan ouput database</p>
 
       </div>
       <!-- Grid column -->

@@ -4,38 +4,10 @@ include "header.php";
 
 ?>
 
-<!-- Membuat Navbar  -->
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  <a class="navbar-brand" href="#">Fake News</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Lapor</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Bagian
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Nasional</a>
-          <a class="dropdown-item" href="#">Internasional</a>
-          <a class="dropdown-item" href="#">Nanggroe</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+<!-- didalam header sudah ada syntaq pemanggilan boostrap
+navbar-->
 
-<!-- membuat slider -->
+<!-- tag slider -->
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -48,7 +20,7 @@ include "header.php";
   </div>
 </div>
 
-<!-- membuat table -->
+<!-- tag table bootstrap -->
 
 <table class="table table-hover table-dark">
   <thead>
@@ -108,6 +80,7 @@ include "header.php";
     </div>
 </div>
 
+<!-- tag footer dari bootstrap -->
 <?php
   include "footer.php";
 
