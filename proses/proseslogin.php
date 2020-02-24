@@ -36,8 +36,20 @@ include "../koneksi/koneksi.php";
         window.location.href='../diskon.php';
         </script>";
 
-        }
+        }elseif($data['level']=="pembeli"){
+            $_SESSION['username']=$data['username'];
+            $_SESSION['level']=$data['level'];
+            $_SESSION['status']='login'; 
+
+        echo "<script>
+        window.location.href='../mahasiswa.php';
+        </script>";
+
+    }else{
+        echo"<script></script> class='alert alert-success' role='alert'>
+        maaf anda gagal masuk!</script>";
     }
+}
 }
 
 

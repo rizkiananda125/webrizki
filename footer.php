@@ -1,7 +1,7 @@
 <!-- footer -->
 <footer class="page-footer font-small teal pt-10">
 
-  <div class="navbar navbar-dark bg-primary">
+  <div class="navbar navbar-light bg-primary">
 
   </div>
 
