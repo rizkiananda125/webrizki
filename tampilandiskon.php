@@ -1,5 +1,3 @@
-<!-- tag scss -->
-
 <style>
 *,
 *::before,
@@ -303,110 +301,57 @@ include "koneksi/koneksi.php";
 <!-- tag html dinamis -->
 
 <section class="forms-section">
-<h1 class="section-title">KAHO.Pejuang</h1>
+<h1 class="section-title" style="font-size: 43px; letter-spacing: 2px; color: #fff;
+    left: 93px; position: relative;">input data</h1>
+
     <div class="forms">
     <div class="form-wrapper is-active">
 
     <button type="button" class="switcher switcher-login">
-        Login
+        yuk check!
         <span class="underline"></span>
     </button>
 
     <!-- tag pemanggilan -->
-
-    <form class="form form-login" action="proses/proseslogin.php" method="POST">
-
-        <fieldset>
-            <legend>Please, enter your email and password for login.</legend>
+    <div class="container">
+        <div class="row">
+            <div class="col-0">
+                <form class="form form-login" action="proses/proses_diskon.php" method="POST">
+                <fieldset>
+                <legend>Please, enter your email and password for login.</legend>
             
-        <div class="input-block">
-            <label for="login-email">Nama</label>
-            <input id="login-email" type="text" name="username" required>
+                    <div class="input-block">
+                        <label for="login-nama_barang">Nama Barang</label>
+                        <input id="login-nama_barang" type="text" name="nama_barang" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="login-harga_barang">Harga Barang</label>
+                        <input id="login-harga_barang" type="number" name="harga_barang" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="login-stok_barang">Stok Barang</label>
+                        <input id="login-stok_barang" type="number" name="stok_barang" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="signup-keterangan">Keterangan</label>
+                        <select name="keterangan" id="signup-keterangan">
+
+                    <option value="tersedia">tersedia</option>
+                    <option value="tidak_tersedia">Tidak tersedia</option>
+		            </select>
+
+                    </div>
             </div>
-        <div class="input-block">
-            <label for="login-password">Password</label>
-            <input id="login-password" type="password" name="password" required>
         </div>
+    </div>
 
         </fieldset>
 
         <!-- proses login 1 -->
 
-        <input type="submit" name= "login" value= "submit"> 
-
-    </form>
-    </div>
-    <div class="form-wrapper">
-        <button type="button" class="switcher switcher-signup">
-        Sign Up
-        <span class="underline"></span>
-        </button>
-        <form class="form form-signup" action="proses/proses_registrasi.php" method="POST">
-        <fieldset>
-            <legend>Please, enter your email, password and password confirmation for sign up.</legend>
-            
-        <div class="input-block">
-            <label for="signup-username">Username</label>
-            <input id="signup-username" type="text" name="username" required>
-        </div>
-        
-        <div class="input-block">
-            <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" name="password" required>
-        </div>
-
-		<div class="input-block">
-            <label for="signup-email">E-mail</label>
-            <input id="signup-email" type="email" name="email" required>
-            </div>
-
-		<div class="input-block">
-        <label for="signup-jenis_kelamin">Jenis Kelamin</label>
-            <select name="jenis_kelamin" id="signup-jenis_kelamin">
-
-                <option value="laki-laki">Laki-laki</option>
-                <option value="perempuan">Perempuan</option>
-		</select>
-		</div>
-			
-
-        <div class="input-block">
-        <label for="signup-level">Level</label>
-            <select name="level" id="signup-level">
+    <input type="submit" style="top: -24px; left: 179px; position: relative;" 
+    name= "periksa" class="btn btn-success" value= "periksa">
                 
-                <option value="penjual">Penjual</option>
-                <option value="pembeli">Pembeli</option>
-
-            </select>
-        </div>
-
-        </fieldset>
-    
-
-        <!-- proses login 2 -->
-
-        <input type="submit" name="registrasi" value="submit"> 
-        
-        </form>
-    </div>
-</div>
-</section>
-
-<br>
-
-<!-- tag JS -->
-
-<script>
-
-    const switchers = [...document.querySelectorAll('.switcher')]
-
-switchers.forEach(item => {
-	item.addEventListener('click', function() {
-		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
-		this.parentElement.classList.add('is-active')
-	})
-})
-</script>
-
-
-

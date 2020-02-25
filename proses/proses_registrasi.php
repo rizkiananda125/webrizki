@@ -11,6 +11,7 @@ if(isset($_POST['registrasi'])){
     $level=$_POST['level'];
 
 // query
+
     $input_query=mysqli_query($koneksi,"insert into user values('$id_user','$username',
     '$password','$email','$jenis_kelamin','$level')") or die
     (mysqli_error($input_query));
@@ -20,7 +21,7 @@ if(isset($_POST['registrasi'])){
 if($input_query){
     echo"
         <script>alert('data berhasil dimasukkan silahkan login')
-            window.location.href='../tampilanlogin.php'
+            window.location.href='../tampilanlogin.php' 
         </script>";
     }
 }
