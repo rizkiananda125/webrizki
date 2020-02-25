@@ -345,11 +345,6 @@ include "koneksi/koneksi.php";
         <fieldset>
             <legend>Please, enter your email, password and password confirmation for sign up.</legend>
             
-            <div class="input-block">
-            <label for="signup-email">E-mail</label>
-            <input id="signup-email" type="email" name="email" required>
-            </div>
-
         <div class="input-block">
             <label for="signup-username">Username</label>
             <input id="signup-username" type="text" name="username" required>
@@ -357,9 +352,23 @@ include "koneksi/koneksi.php";
         
         <div class="input-block">
             <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" required>
+            <input id="signup-password" type="password" name="password" required>
         </div>
-        </fieldset>
+
+		<div class="input-block">
+            <label for="signup-email">E-mail</label>
+            <input id="signup-email" type="email" name="email" required>
+            </div>
+
+		<div class="input-block">
+        <label for="signup-jenis_kelamin">Jenis Kelamin</label>
+            <select name="jenis_kelamin" id="signup-jenis_kelamin">
+
+                <option value="penjual">laki-laki</option>
+                <option value="pembeli">wanita</option>
+		</select>
+		</div>
+			
 
         <div class="input-block">
         <label for="signup-level">Level</label>
@@ -376,7 +385,7 @@ include "koneksi/koneksi.php";
 
         <!-- proses login 2 -->
 
-        <input type="submit" name= "registrasi" value= "submit"> 
+        <input type="submit" name="registrasi" value="submit"> 
         
         </form>
     </div>

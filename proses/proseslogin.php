@@ -11,7 +11,7 @@ include "../koneksi/koneksi.php";
  if (isset($_POST['login'])){
 
     $username=$_POST['username'];
-    $password=$_POST['password'];
+    $password=md5($_POST['password']);
 
     //query
 
@@ -30,7 +30,9 @@ include "../koneksi/koneksi.php";
         if($data['level']=="penjual"){
             $_SESSION['username']=$data['username'];
             $_SESSION['level']=$data['level'];
-            $_SESSION['status']='login'; 
+            $_SESSION['status']='login';
+        
+        // pop up berhasil masuk
 
         echo "<script>
         window.location.href='../diskon.php';
@@ -41,15 +43,24 @@ include "../koneksi/koneksi.php";
             $_SESSION['level']=$data['level'];
             $_SESSION['status']='login'; 
 
-        echo "<script>
-        window.location.href='../mahasiswa.php';
-        </script>";
+            // pop up berhasil masuk
 
-    }else{
-        echo"<script></script> class='alert alert-success' role='alert'>
-        maaf anda gagal masuk!</script>";
-    }
+                echo "<script>alert('data berhasil dimasukkan silahkan login')
+                        window.location.href='../mahasiswa.php'
+            </script>";
+        
+        // pop up jika tidak berhasil masuk
+
+        }else{
+            echo"maaf anda gagal masuk!";
+        }
+
+// pop up jika tidak berhasil masuk
+
+}else{
+    echo"maaf anda gagal masuk!";
 }
+
 }
 
 
