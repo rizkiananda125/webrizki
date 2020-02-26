@@ -8,7 +8,7 @@
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-	background: radial-gradient(#ff00cc,#333399);
+	background: radial-gradient(#0575E6,#021B79);
 }
 
 .forms-section {
@@ -302,12 +302,12 @@ include "koneksi/koneksi.php";
 
 <section class="forms-section">
 <h1 class="section-title" style="font-size: 43px; letter-spacing: 2px; color: #fff;
-    left: 93px; position: relative;">Nilai Mahasiswa</h1>
+    left: -10px; position: relative;">Nilai Mahasiswa</h1>
 
     <div class="forms">
     <div class="form-wrapper is-active">
 
-    <button type="button" class="switcher switcher-login">
+    <button type="button" class="switcher switcher-login" style="left: -99px;">
         yuk check!
         <span class="underline"></span>
     </button>
@@ -317,7 +317,8 @@ include "koneksi/koneksi.php";
         <div class="row">
             <div class="col-0">
 
-                <form class="form form-login" action="proses/prosesmahasiswa.php" method="POST">
+                <form class="form form-login" action="proses/prosesmahasiswa.php" method="POST" 
+                style="position: relative;top: 16px;left: 193px;">
                 <fieldset>
 
                     <div class="input-block">
@@ -362,14 +363,77 @@ include "koneksi/koneksi.php";
                         <option value="pria">Pria</option>
                         <option value="wanita">Wanita</option>
 		            </select>
-		        </div>
+		            </div>
+
+                </form>
             </div>
         </div>
     </div>
-
+            <input type="submit" style="top: -11px; left: 379px; position: relative;" 
+            name= "periksa" class="btn btn-success" value= "input">
         </fieldset>
 
-        <!-- proses login 1 -->
 
-    <input type="submit" style="top: -24px; left: 179px; position: relative;" 
-    name= "periksa" class="btn btn-success" value= "periksa">
+    <?php
+
+    include "koneksi/koneksi.php";
+
+    $tampilan_data=mysqli_query($koneksi,'SELECT * FROM nilai')or die(mysqli_error(''));
+
+    while($total=mysqli_fetch_array($tampilan_data)){
+
+        if($total['total']<=50){
+            echo"
+                <div class='alert alert-secondary' role='alert'>
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                maaf anda tidak lulus! 
+
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>
+
+                </div> 
+                ";
+
+        }elseif($total['total']<=65){
+            echo"
+                <div class='alert alert-Jurusanger' role='alert'>
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                maaf anda tidak lulus!
+                
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>
+
+                </div>
+                ";
+                
+        }elseif($total['total']<=70){
+            echo"
+                <div class='alert alert-warning' role='alert'>
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                selamat anda lulus!
+                
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
+
+                </div>
+                ";
+
+        }elseif($total['total']>=80){
+            echo"
+                <div class='alert alert-warning' role='alert'>
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                selamat anda lulus!
+                
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
+                </div>
+                ";
+        }elseif($total['total']<=90){
+            echo"
+                <div class='alert alert-success' role='alert'>
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].",
+                selamat anda lulus!
+                
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
+                
+                </div>
+                ";
+            }
+    }
+    ?>
