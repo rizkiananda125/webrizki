@@ -318,7 +318,7 @@ include "koneksi/koneksi.php";
             <div class="col-0">
 
                 <form class="form form-login" action="proses/prosesmahasiswa.php" method="POST" 
-                style="position: relative;top: 16px;left: 193px;">
+                style="position: relative;top: 16px;left: 283px;">
                 <fieldset>
 
                     <div class="input-block">
@@ -334,6 +334,11 @@ include "koneksi/koneksi.php";
                     <div class="input-block">
                         <label for="login-jurusan">Jurusan</label>
                         <input id="login-jurusan" type="text" name="jurusan" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="login-mata_kuliah">Mata Kuliah</label>
+                        <input id="login-mata_kuliah" type="text" name="mata_kuliah" required>
                     </div>
 
                     <div class="input-block">
@@ -365,12 +370,13 @@ include "koneksi/koneksi.php";
 		            </select>
 		            </div>
 
+                    <input type="submit" style="" name="periksa" class="btn btn-success" value="input">
+
                 </form>
             </div>
         </div>
     </div>
-            <input type="submit" style="top: -11px; left: 379px; position: relative;" 
-            name= "periksa" class="btn btn-success" value= "input">
+    
         </fieldset>
 
 
@@ -385,7 +391,7 @@ include "koneksi/koneksi.php";
         if($total['total']<=50){
             echo"
                 <div class='alert alert-secondary' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 maaf anda tidak lulus! 
 
                 <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>
@@ -396,7 +402,7 @@ include "koneksi/koneksi.php";
         }elseif($total['total']<=65){
             echo"
                 <div class='alert alert-Jurusanger' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 maaf anda tidak lulus!
                 
                 <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>
@@ -407,7 +413,7 @@ include "koneksi/koneksi.php";
         }elseif($total['total']<=70){
             echo"
                 <div class='alert alert-warning' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 selamat anda lulus!
                 
                 <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
@@ -418,7 +424,7 @@ include "koneksi/koneksi.php";
         }elseif($total['total']>=80){
             echo"
                 <div class='alert alert-warning' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 selamat anda lulus!
                 
                 <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
@@ -427,7 +433,7 @@ include "koneksi/koneksi.php";
         }elseif($total['total']<=90){
             echo"
                 <div class='alert alert-success' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", nilai ".$total['total'].", predikat ".$total['predikat'].",
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].",
                 selamat anda lulus!
                 
                 <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
