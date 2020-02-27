@@ -391,55 +391,86 @@ include "koneksi/koneksi.php";
         if($total['total']<=50){
             echo"
                 <div class='alert alert-secondary' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan 
+                ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai 
+                ".$total['total'].", predikat ".$total['predikat'].", 
                 maaf anda tidak lulus! 
 
-                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-info'>Edit</a>
 
-                </div> 
-                ";
+                <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-danger'>Hapus</a>
+                
+                </div>";
 
         }elseif($total['total']<=65){
             echo"
                 <div class='alert alert-Jurusanger' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 maaf anda tidak lulus!
                 
-                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-info'>Edit</a>
 
-                </div>
-                ";
+                <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-danger'>Hapus</a>
+
+                </div>";
                 
         }elseif($total['total']<=70){
             echo"
                 <div class='alert alert-warning' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 selamat anda lulus!
                 
-                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 
+                'type='submit' class='btn btn-info'>Edit</a>
 
-                </div>
-                ";
+                <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-danger'>Hapus</a>
+
+                </div>";
+
+
 
         }elseif($total['total']>=80){
             echo"
                 <div class='alert alert-warning' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].", 
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 selamat anda lulus!
                 
-                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
-                </div>
-                ";
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 
+                'type='submit' class='btn btn-info'>Edit</a>
+                
+
+                <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-danger'>Hapus</a>
+                
+                </div>";
+
+
         }elseif($total['total']<=90){
             echo"
                 <div class='alert alert-success' role='alert'>
-                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai ".$total['total'].", predikat ".$total['predikat'].",
+                nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                nilai ".$total['total'].", predikat ".$total['predikat'].",
                 selamat anda lulus!
                 
-                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 'type='submit' class='btn btn-info'>Edit</a>
+                <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 
+                'type='submit' class='btn btn-info'>Edit</a>
+
+                <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
+                type='submit' class='btn btn-danger'>Hapus</a>
                 
-                </div>
-                ";
+                </div>";
             }
     }
     ?>

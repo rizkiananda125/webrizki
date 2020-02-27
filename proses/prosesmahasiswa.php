@@ -7,6 +7,7 @@ if(isset($_POST['periksa'])){
     $nama_mahasiswa=$_POST['nama_mahasiswa'];
     $nim_mahasiswa=$_POST['nim_mahasiswa'];
     $jurusan=$_POST['jurusan'];
+    $mata_kuliah=$_POST['mata_kuliah'];
     $uts=$_POST['uts'];
     $uas=$_POST['uas'];
     $quiz=$_POST['quiz'];
@@ -56,7 +57,7 @@ if(isset($_POST['periksa'])){
     // query
 
     $total=mysqli_query($koneksi,"insert into nilai values('$id_mahasiswa','$nama_mahasiswa',
-    '$nim_mahasiswa','$jurusan','$uts','$uas','$quiz','$harian','$jenis_kelamin','$total','$predikat')") or die(mysqli_error($total));
+    '$nim_mahasiswa','$jurusan','$mata_kuliah','$uts','$uas','$quiz','$harian','$jenis_kelamin','$total','$predikat')") or die(mysqli_error($total));
 
     // proes kembali layar awal
 
