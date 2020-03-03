@@ -1,3 +1,13 @@
+<!-- koneksi database -->
+
+<?php
+
+include "header.php";
+include "koneksi/koneksi.php";
+
+?>
+
+
 <style>
 *,
 *::before,
@@ -287,14 +297,6 @@ body {
 
 </style>
 
-<!-- koneksi database -->
-
-<?php
-
-include "header.php";
-include "koneksi/koneksi.php";
-
-?>
 
 <br>
         
@@ -392,7 +394,7 @@ include "koneksi/koneksi.php";
             echo"
                 <div class='alert alert-secondary' role='alert'>
                 nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", Jurusan 
-                ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", nilai 
+                ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", jenis_kelamin ".$total['jenis_kelamin'].", nilai 
                 ".$total['total'].", predikat ".$total['predikat'].", 
                 maaf anda tidak lulus! 
 
@@ -405,10 +407,11 @@ include "koneksi/koneksi.php";
                 </div>";
 
         }elseif($total['total']<=65){
+
             echo"
                 <div class='alert alert-Jurusanger' role='alert'>
                 nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
-                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", jenis_kelamin ".$total['jenis_kelamin'].",
                 nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 maaf anda tidak lulus!
                 
@@ -417,14 +420,13 @@ include "koneksi/koneksi.php";
 
                 <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
                 type='submit' class='btn btn-danger'>Hapus</a>
-
                 </div>";
                 
         }elseif($total['total']<=70){
             echo"
                 <div class='alert alert-warning' role='alert'>
                 nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
-                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", jenis_kelamin ".$total['jenis_kelamin'].",
                 nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 selamat anda lulus!
                 
@@ -433,7 +435,6 @@ include "koneksi/koneksi.php";
 
                 <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
                 type='submit' class='btn btn-danger'>Hapus</a>
-
                 </div>";
 
 
@@ -442,14 +443,13 @@ include "koneksi/koneksi.php";
             echo"
                 <div class='alert alert-warning' role='alert'>
                 nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
-                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", jenis_kelamin ".$total['jenis_kelamin'].",
                 nilai ".$total['total'].", predikat ".$total['predikat'].", 
                 selamat anda lulus!
                 
                 <a href='update_mahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']." 
                 'type='submit' class='btn btn-info'>Edit</a>
                 
-
                 <a href='proses/proses_hapusmahasiswa.php?id_mahasiswa=".$total['id_mahasiswa']."' 
                 type='submit' class='btn btn-danger'>Hapus</a>
                 
@@ -460,7 +460,7 @@ include "koneksi/koneksi.php";
             echo"
                 <div class='alert alert-success' role='alert'>
                 nama anda ".$total['nama_mahasiswa'].", NIM ".$total['nim_mahasiswa'].", 
-                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", 
+                Jurusan ".$total['jurusan'].", mata kuliah ".$total['mata_kuliah'].", jenis_kelamin ".$total['jenis_kelamin'].",
                 nilai ".$total['total'].", predikat ".$total['predikat'].",
                 selamat anda lulus!
                 

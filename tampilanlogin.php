@@ -1,3 +1,13 @@
+<!-- koneksi database -->
+
+<?php
+
+include "header.php";
+include "koneksi/koneksi.php";
+
+?>
+
+
 <!-- tag scss -->
 
 <style>
@@ -288,15 +298,6 @@ body {
 }
 
 </style>
-
-<!-- koneksi database -->
-
-<?php
-
-include "header.php";
-include "koneksi/koneksi.php";
-
-?>
 
 <br>
         
